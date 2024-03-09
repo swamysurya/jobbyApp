@@ -33,25 +33,23 @@ class JobDetails extends Component {
 
   convertToCamelCase = obj => {
     const newObj = {}
-    for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        const newKey = this.toCamelCase(key)
-        const value = obj[key]
-        if (
-          value !== null &&
-          typeof value === 'object' &&
-          !Array.isArray(value)
-        ) {
-          newObj[newKey] = this.convertToCamelCase(value)
-        } else if (Array.isArray(value)) {
-          newObj[newKey] = value.map(item =>
-            typeof item === 'object' ? this.convertToCamelCase(item) : item,
-          )
-        } else {
-          newObj[newKey] = value
-        }
+    Object.keys(obj).forEach(key => {
+      const newKey = this.toCamelCase(key)
+      const value = obj[key]
+      if (
+        value !== null &&
+        typeof value === 'object' &&
+        !Array.isArray(value)
+      ) {
+        newObj[newKey] = this.convertToCamelCase(value)
+      } else if (Array.isArray(value)) {
+        newObj[newKey] = value.map(item =>
+          typeof item === 'object' ? this.convertToCamelCase(item) : item,
+        )
+      } else {
+        newObj[newKey] = value
       }
-    }
+    })
     return newObj
   }
 
@@ -123,7 +121,11 @@ class JobDetails extends Component {
           <hr />
           <div className="des">
             <h1 className="description-heading">description</h1>
-            <a href={jobDetails.companyWebsiteUrl} target="_blank">
+            <a
+              href={jobDetails.companyWebsiteUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaExternalLinkAlt />
               Visit
             </a>
