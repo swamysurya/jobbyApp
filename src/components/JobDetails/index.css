@@ -1,0 +1,91 @@
+.job-details-container {
+  background-color: #000000;
+}
+
+.job-details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.job-card {
+  padding: 2rem;
+  margin: 30px;
+  width: 80%;
+  background-color: #272727;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: 'Roboto';
+}
+
+.skills-container {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.list-element {
+  width: 50%;
+}
+.des {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill-image {
+  width: 30px;
+}
+.skill-name {
+  font-size: 16px;
+}
+.description-heading {
+  font-size: 18px;
+}
+.life-at-comapy-image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .list-element {
+    width: 170px;
+  }
+  .skill-image {
+    width: 45px;
+  }
+  .skill-name {
+    font-size: 20px;
+  }
+  .description-heading {
+    font-size: 26px;
+  }
+  .life-style-container {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.simailar-jobs-container {
+  width: 80%;
+  margin: auto;
+  list-style-type: none;
+  padding-left: 0px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .simailar-jobs-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.similar-jobs-heading {
+  color: #ffffff;
+  font-size: 42px;
+  text-align: left;
+  width: 80%;
+}

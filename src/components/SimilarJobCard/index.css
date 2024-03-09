@@ -1,0 +1,78 @@
+.job-card-container1 {
+  background-color: #272727;
+  font-family: 'Roboto';
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 20px 0px;
+}
+.company-image {
+  width: 120px;
+}
+.description-heading {
+  font-size: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .job-card-container1 {
+    width: 300px;
+    margin-right: 10px;
+  }
+  .company-image {
+    width: 80px;
+  }
+  .description-heading {
+    font-size: 20px;
+  }
+}
+
+.logo-job-star-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.star-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.loc-jobtype-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.loc-job-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.description-para {
+  font-size: 18px;
+}
+.loc-job-lpa-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.lpa-heading {
+  font-size: 22px;
+}
+.rating-para {
+  margin: 0px;
+}
+.job-title {
+  font-size: 32px;
+}
+@media screen and (min-width: 768px) {
+  .job-title {
+    font-size: 22px;
+  }
+}
